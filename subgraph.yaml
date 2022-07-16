@@ -1,0 +1,24 @@
+specVersion: 0.0.2
+description: Indexing all FX-EVM Block data
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: Factory
+    network: testnet
+    source:
+      address: "0x83849cb4b2179fbaee46affd15ec64984f2b61e6"
+      abi: Factory
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      entities:
+        - Pair
+        - Token
+      abis:
+        - name: Factory
+          file: ./abis/FXSwapV2Factory.json
+      blockHandlers:
+        - handler: handleBlock
+      file: ./src/mappings/blocks.ts
