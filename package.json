@@ -6,14 +6,9 @@
     "build": "graph build",
     "deploy": "graph deploy FX-EVM-Blocklytics --ipfs https://testnet-fx-ipfs.functionx.io --node https://testnet-graph-node.functionx.io/admin",
     "create": "graph create FX-EVM-Blocklytics --node https://testnet-graph-node.functionx.io/admin",
-    "create-local": "graph create --node http://localhost:8020/ blocklytics/ethereum-blocks",
-    "remove-local": "graph remove --node http://localhost:8020/ blocklytics/ethereum-blocks",
-    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 blocklytics/ethereum-blocks",
-    "deploy-rinkeby": "graph deploy --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ blocklytics/rinkeby-blocks",
-    "deploy-kovan": "graph deploy --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ blocklytics/kovan-blocks",
-    "deploy-goerli": "graph deploy --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ blocklytics/goerli-blocks",
-    "deploy-ropsten": "graph deploy --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ blocklytics/ropsten-blocks",
-    "deploy-poa": "graph deploy --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ blocklytics/poa-core-blocks"
+    "create-local": "graph create --node http://localhost:8020/ FX-EVM-Blocklytics",
+    "remove-local": "graph remove --node http://localhost:8020/ FX-EVM-Blocklytics",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 FX-EVM-Blocklytics"
   },
   "dependencies": {
     "@graphprotocol/graph-cli": "^0.17.1",
